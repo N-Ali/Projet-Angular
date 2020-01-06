@@ -1,0 +1,28 @@
+<div *ngIf="authService.isLoggedIn | async as isLoggedIn; else elseBlock" style="margin-left: 1%; margin-top: 2%;">
+    <div >
+        <div >
+          <div>
+            <h2 style="font-size: 25px">Page De Profile.</h2>
+            <a class="button"   (click)="onLogout()">Déconnection</a>
+            <br />
+            <h3 style="font-size: 20px;">Bonjour <B>{{name}}</B> nous vous souhaiton une bonne visite sur notre site.</h3>
+            <p style="font-size: 17px;">
+              nom: {{name}} <br /><br />
+              email: {{email}}
+            </p>
+          </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #elseBlock>
+  <div class="signup">
+    <h1 style="text-align: center;">Tu n'as pas de compte? <br /> Inscrit toi maintenant!</h1>
+    <a class="button"  style="margin-left: auto; margin-right: auto;" [routerLink]="'/signup'" >Inscription</a>
+  </div>
+
+  <div class="login">
+      <h1 style="text-align: center;">Bienvenue.<br /> <br /></h1>
+      <a class="button" style="margin-left: auto; margin-right: auto;" [routerLink]="'/login'" >Connection</a>
+  </div>
+</ng-template>

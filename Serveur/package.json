@@ -1,0 +1,25 @@
+{
+  "name": "Serveur",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "express-bearer-token": "2.4.0",
+    "express-fileupload": "^1.1.6",
+    "njwt": "1.0.0",
+    "nodemon": "2.0.2",
+    "sqlite": "3.0.3",
+    "sqlite3": "^4.1.1"
+  }
+}

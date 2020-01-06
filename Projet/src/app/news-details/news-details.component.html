@@ -1,0 +1,7 @@
+<div style="margin: 5px; padding: 1em;"class="article-news" *ngFor="let news of new">
+    <img class="gif"  src={{news.image}} />
+    <h1 style="font-size: 40px; text-align: center;">{{ news.title }} </h1>
+    <span style="font-size: 20px; line-height: 140%;" [innerHTML]="news.article"></span>
+    <span style="right: 0; bottom: 0; position: absolute; font-size: 15px;">Fait le {{ news.date }} par <B>{{ news.authour }}</B>.</span>
+</div>
+

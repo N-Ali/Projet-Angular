@@ -1,0 +1,22 @@
+<div class="seach-form" style="padding: 2%;">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <label class="full-width-input" >
+            Votre Recherche: 
+            <input type="text" placeholder="Recherche" formControlName="search" required>
+            <button class="button" style=" cursor: pointer; display: inline-block;">Rechercher</button>
+          </label>
+    </form>
+</div>
+
+<ul>
+    <li class="li" *ngFor="let result of results">
+        <span style="cursor:pointer;" (click)= "onSelect(result)">
+            <img class="img" src={{result.image}} />
+            <h1>{{result.title}}</h1>
+        </span>
+        <br />
+        <br />
+    </li>
+</ul>
+
+

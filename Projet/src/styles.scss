@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-toolbar.mat-primary {
+    background: #673ab7;
+    color: #fff;
+}
+
+.fill-space {
+    // This fills the remaining space, by using flexbox.
+    // Every toolbar row uses a flexbox row layout.
+    flex: 1 1 auto;
+ }
+
+.title-center {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.signup{
+    margin-top: 5%;
+    width: 50%;
+    float: left;
+    //background-color: blue;
+
+}
+
+.login{
+    //background-color: red;
+    margin-top: 5%;
+    width: 50%;
+    float: right;
+}
+
+.button {
+    display: block;
+    width: 115px;
+    height: 40px;
+    background: #673ab7;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.gif-sneakers{
+    height: 50%;
+}
+
+.gif{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+}
+
+.img{
+    width: 40%;
+    height: 40%;
+    margin-top: 2%;
+}
+
+.news-div{
+    border-width:3px;
+    border-style:solid;
+    border-color: rgb(145, 145, 145);
+    margin: 5px;
+}
+
+.div-home{
+    display: inline-block;
+    padding: 15px;
+    width: 30%;
+    margin: 5px;
+}
+
+.li{
+    text-align: center;
+    display: inline-block;
+    width: 45%;
+    border-style:solid;
+    border-color: rgb(145, 145, 145);
+    margin: 5px;
+}

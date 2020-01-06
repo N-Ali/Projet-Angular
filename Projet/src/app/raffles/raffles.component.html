@@ -1,0 +1,17 @@
+<div *ngIf="authService.isLoggedIn | async as isLoggedIn; else elseBlock">
+<ul>
+    <li class="li" *ngFor="let raffle of raffles">
+        <span style="cursor:pointer;" (click)= "onSelect(raffle)">
+            <img class="img" src={{raffle.image}} />
+            <h1>{{raffle.title}}</h1>
+        </span>
+        <br />
+        <br />
+    </li>
+</ul>
+</div>
+
+<ng-template #elseBlock>
+    <h1>Veillez vous connecter.<br /></h1>
+    <a class="button" routerLink="/login">Connection</a>
+</ng-template>

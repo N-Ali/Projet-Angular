@@ -1,0 +1,14 @@
+<div class="gif-sneakers">
+    <img src="/assets/sneakers.gif" class="gif"/>
+</div>
+
+<div class="news-div">
+    <h1 style="text-align: center;"><B>Les Dernières<br /> News</B></h1>
+    <div *ngFor="let new of news" class="div-home">
+        <span style="cursor:pointer;" (click)= "onSelect(new)">
+            <div style="text-align: center;" >
+                <img src={{new.image}} style="width: 30%; height: 25%;"/>
+                <h2>{{ new.title }}</h2>
+            </div>
+        </span>
+</div>

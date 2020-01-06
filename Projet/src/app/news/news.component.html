@@ -1,0 +1,18 @@
+<div *ngIf="authService.isLoggedIn | async as isLoggedIn; else elseBlock" style="margin-left: 1%; margin-top: 2%;">
+
+    <ul>
+        <li class="li" *ngFor="let new of news">
+            <span style="cursor:pointer;" (click)= "onSelect(new)">
+                <img class="img" src={{new.image}} />
+                <h1>{{new.title}}</h1>
+            </span>
+            <br />
+            <br />
+        </li>
+    </ul>
+  </div>
+  
+<ng-template #elseBlock>
+    <h1>Veillez vous connecter.<br /></h1>
+    <a class="button" routerLink="/login">Connection</a>
+</ng-template>

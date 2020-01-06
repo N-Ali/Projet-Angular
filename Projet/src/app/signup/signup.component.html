@@ -1,0 +1,46 @@
+<div *ngIf="authService.isLoggedIn | async as isLoggedIn; else elseBlock" style="margin-left: 1%; margin-top: 2%;">
+  <h1>Vous êtes déjà connecté.<br />Retour vers le profil.<br /></h1>
+  <a class="button" routerLink="/account">Profil</a>
+</div>
+
+
+<ng-template #elseBlock>
+<div class="grid-container">
+    <div class="grid-x">
+      <div class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 cell">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <h2>Inscription</h2>
+          <p>Veullez entrer vos information pour vous inscrire.</p>
+          <label class="full-width-input">
+            Email:
+            <input type="text" placeholder="Email" formControlName="email" required>
+          </label>
+          <br />
+          <br />
+          <label class="full-width-input">
+            Pseudo:
+            <input type="text" placeholder="Pseudo" formControlName="name" required>
+          </label>
+          <br />
+          <br />
+          <label class="full-width-input">
+            Mot de passe (Minimum 8 caractères):
+            <input type="password" placeholder="Mot de passe" formControlName="password" required>
+          </label>
+          <br />
+          <br />
+          <p style="color: red;"[innerHTML]="message"></p>
+          <br />
+          <br />
+          <button class="button" style=" cursor: pointer;">Enregister</button>
+        </form>
+        <br />
+        <br />
+        <div >
+          Déjà enregistré? <a routerLink="/login" style="color: #673ab7;" queryParamsHandling="preserve">Connecte toi ici!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ng-template>
