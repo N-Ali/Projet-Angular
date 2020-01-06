@@ -1,6 +1,7 @@
 Pour lancer le serveur: - Demmarez 2 terminaux
 			- Lancez la commande: "npm install" "npm start" dans le dosier Serveur
 			- Lancez la commande "ng serve -o" dans le dossier Projet
+			si cette erreure "Could not find module "@angular-devkit/build-angular" s'affiche lors du ng serve -o 				il faudra faire un npm install et ensuite de refaire un ng serve -o 
 
 
 Lien du site: http://localhost:4200/
